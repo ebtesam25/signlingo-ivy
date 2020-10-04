@@ -11,37 +11,39 @@ class Level extends Component {
     } 
       render() {
           return (
-           <div style={{margin:'auto', alignSelf:'center', alignContent:'center', justifyContent:'center', height:'90vh'}}>
-            <div style={{borderBottomColor:'#F7F9FB', borderBottomStyle:'outset', height:'10vh'}}>
-            <img src={Logo} height="30vh"  style={{ margin:'1.5%', float:'left', marginLeft:'5%'}}></img>
+           <div style={{margin:'auto', alignSelf:'center', alignContent:'center', justifyContent:'center', height:'70vh'}}>
+            <div style={{height:'10vh', backgroundColor:'#ffffff'}}>
+            <img src={Logo} height="24vh"  style={{ margin:'1.5%', float:'left', marginLeft:'5%'}}></img>
             
-            <div style={{fontFamily:'Work Sans', fontSize:30, fontWeight:'600', color:'#717171', paddingTop:'1.5%', float:'right', marginRight:'5%'}}>Logout</div>
-            <Link to="/level">  <div style={{fontFamily:'Work Sans', fontSize:30, fontWeight:'600', color:'#717171', paddingTop:'1.5%', float:'right' ,marginRight:'1.5%'}}>Home</div></Link>
+            <div style={{fontFamily:'Helvetica', fontSize:20, fontWeight:'600', color:'#717171', paddingTop:'1.5%', float:'right', marginRight:'5%'}}>Logout</div>
+            <div style={{fontFamily:'Helvetica', fontSize:20, fontWeight:'600', color:'#717171', paddingTop:'1.5%', paddingRight:'1.5%', float:'right' ,marginRight:'1.5%'}}>Home</div>
             </div>
+            <hr/>
           <br></br>
           
-          <div style={{backgroundColor:'#ededed', marginTop:'-1%', display:'block', height:'88vh'}}>
+          
+          <div style={{backgroundColor:'#FFFFFF', marginTop:'-1%', display:'block', height:'88vh'}}>
            
-            <div style={{fontFamily:'Work Sans', fontSize:50, fontWeight:'600', color:'#717171', paddingTop:'5%'}}>Which level do you want to practice today?</div> <br></br>
+            <div style={{fontFamily:'Helvetica', fontSize:30, fontWeight:'600', color:'#717171', paddingTop:'3%'}}>Which level do you want to practice today?</div> <br></br>
            
-            <Link to="/level1"> <div style={{float:'left',backgroundColor:'#FFF', marginTop:'5%', marginLeft:'15%', width:'20%',paddingTop:'2.5%', borderRadius:20, boxShadow:'-webkit-box-shadow: 5px 5px 8px -1px rgba(0,0,0,0.67)-webkit-box-shadow: 5px 5px 8px -1px rgba(0,0,0,0.67)',boxShadow: '5px 5px 8px -1px rgba(0,0,0,0.67)'}}>
-           <h1 style={{fontFamily:'Roboto', fontSize:50, color:'#274968'}}>Level 1</h1>
+            <Link to="/level1"> <div style={{float:'left', backgroundColor:'#FFF', marginTop:'5%', marginLeft:'15%', width:'20%',paddingTop:'1%', borderRadius:20,borderStyle:'solid', borderColor:'#8E8E8E', height:'53vh'}}>
+           <h1 style={{fontFamily:'Helvetica', fontSize:30, color:'#274968'}}>Level 1</h1><br/>
             <img src={L1}></img>
-            <h1 style={{fontFamily:'Roboto', fontSize:30, color:'#274968'}}>0 points earned</h1>
+            <h1 style={{fontFamily:'Helvetica', fontSize:25, color:'#274968'}}>0 points earned</h1>
             </div></Link>
 
 
-            <Link to="/level2"> <div style={{float:'left',backgroundColor:'#FFF', marginTop:'5%', marginLeft:'5%', width:'20%',paddingTop:'2.5%', borderRadius:20, boxShadow:'-webkit-box-shadow: 5px 5px 8px -1px rgba(0,0,0,0.67)-webkit-box-shadow: 5px 5px 8px -1px rgba(0,0,0,0.67)',boxShadow: '5px 5px 8px -1px rgba(0,0,0,0.67)'}}>
-           <h1 style={{fontFamily:'Roboto', fontSize:50, color:'#274968'}}>Level 2</h1>
+            <Link to="/level2"> <div style={{float:'left', backgroundColor:'#FFF', marginTop:'5%', marginLeft:'5%', width:'20%',paddingTop:'1%', borderRadius:20,borderStyle:'solid', borderColor:'#8E8E8E', height:'53vh'}}>
+           <h1 style={{fontFamily:'Helvetica', fontSize:30, color:'#274968'}}>Level 2</h1><br/>
             <img src={L2}></img>
-            <h1 style={{fontFamily:'Roboto', fontSize:30, color:'#274968'}}>0 points earned</h1>
+            <h1 style={{fontFamily:'Helvetica', fontSize:25, color:'#717171'}}>0 points earned</h1>
             </div></Link>
 
 
-            <Link to="/level3"><div style={{float:'left',backgroundColor:'#FFF', marginTop:'5%', marginLeft:'5%', width:'20%',paddingTop:'2.5%', borderRadius:20, boxShadow:'-webkit-box-shadow: 5px 5px 8px -1px rgba(0,0,0,0.67)-webkit-box-shadow: 5px 5px 8px -1px rgba(0,0,0,0.67)',boxShadow: '5px 5px 8px -1px rgba(0,0,0,0.67)'}}>
-           <h1 style={{fontFamily:'Roboto', fontSize:50, color:'#274968'}}>Level 3</h1>
+            <Link to="/level3"><div style={{float:'left', backgroundColor:'#FFF', marginTop:'5%', marginLeft:'5%', width:'20%',paddingTop:'1%', borderRadius:20,borderStyle:'solid', borderColor:'#8E8E8E', height:'53vh'}}>
+           <h1 style={{fontFamily:'Helvetica', fontSize:30, color:'#274968'}}>Level 3</h1><br/>
             <img src={L3}></img>
-            <h1 style={{fontFamily:'Roboto', fontSize:30, color:'#274968'}}>100 points earned</h1>
+            <h1 style={{fontFamily:'Helvetica', fontSize:25, color:'#717171'}}>100 points earned</h1>
             </div></Link>
 
             

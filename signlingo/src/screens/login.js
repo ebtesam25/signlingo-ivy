@@ -10,26 +10,21 @@ class Login extends Component {
       render() {
           return (
            <div style={{margin:'auto', alignSelf:'center', alignContent:'center', justifyContent:'center'}}>
-           <div style={{float:'right', width:'60%',alignSelf:'center', verticalAlign:'middle', paddingTop:'15%', backgroundColor:'#F7F9FB', height:'69vh'}}>
+           <div style={{float:'right', width:'60%',alignSelf:'center', verticalAlign:'middle', paddingTop:'10%', backgroundColor:'#F7F9FB', height:'80vh'}}>
             <img src={Slide} height="300vh"  style={{ margin:'1.5%', alignSelf:'center'}}></img>
           <br></br>
     
-            <div style={{fontFamily:'Work Sans', fontSize:40, fontWeight:'800', color:'#2D3748'}}>Learn Sign Langauge interactively.</div>
+            <div style={{fontFamily:'Helvetica', fontSize:30, fontWeight:'600', color:'#2D3748', marginTop:'4%'}}>Learn Sign Langauge interactively.</div>
      
           </div>
             <div style={{float:'left', width:'40%'}}>
-            <div style={{fontFamily:'Work Sans', fontSize:60, fontWeight:'800', color:'#2D3748', marginTop:'30%'}}>Login</div>
-            <input type="text" name="name" placeholder="Email" style={{width:'60%', fontSize:20, borderColor:'#F7F9FB', borderRadius:10, backgroundColor:'#F7F9FB', marginTop:'15%', padding:'2.5%'}} />
-            <input type="password"  name="name" placeholder="Password" style={{width:'60%', fontSize:20, borderColor:'#F7F9FB', borderRadius:10, backgroundColor:'#F7F9FB', marginTop:'5%' , padding:'2.5%'}} />
+            <div style={{fontFamily:'Helvetica', fontSize:45, fontWeight:'550', color:'#2D3748', marginTop:'30%', marginBottom:"3%"}}>Sign In</div>
+            <input type="text" placeholder="Email" style={{width:'50%', fontSize:16, borderRadius:10, borderWidth :0, backgroundColor:'#E7E7E7', marginTop:'5%' , padding:'3%'}} />
+            <input type="password" placeholder="Password" style={{width:'50%', fontSize:16, borderRadius:10, borderWidth :0, backgroundColor:'#E7E7E7', marginTop:'5%' , padding:'3%'}} />
             
-            <Link to="/home"> <div style={{borderRadius:20,backgroundColor:'#274968', color:'#FFF', width:'40%', height:'5vh', fontFamily:'Work Sans',textAlign:'center', fontWeight:'600', paddingTop:'2.5%', alignSelf:'center', justifyContent:'center', marginLeft:'30%', marginTop:'5%'}}>LOGIN</div></Link>
+            <Link to="/home" style = {{textDecoration: 'none'}}> <div style={{borderRadius:10,backgroundColor:'#274968', color:'#FFF', width:'40%', fontFamily:'Helvetica' , fontSize: '12pt', textAlign:'center', fontWeight:'600', padding:'2.5%', alignSelf:'center', justifyContent:'center', marginLeft:'27%', marginTop:'5%', marginBottom:"10%"}}>LOGIN</div></Link>
+            <p style={{fontFamily:'Helvetica', fontSize:18, color:'#2D3748'}}>{"Don't have an account? "}<Link to = "/register"  style = {{textDecoration: 'none'}}>Sign up</Link></p>
             </div>
-          
-
-  
-  
-  
-  
            </div>   
           );
       }

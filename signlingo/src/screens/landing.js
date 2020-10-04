@@ -11,12 +11,12 @@ class Landing extends Component {
           return (
            <div style={{margin:'auto', alignSelf:'center', alignContent:'center', justifyContent:'center'}}>
             
-            <img src={Splash} height="300vh"  style={{ margin:'1.5%', alignSelf:'center'}}></img>
+            <img src={Splash} height="200vh"  style={{ marginTop:'5%', alignSelf:'center'}}></img>
           <br></br>
-            <img src={Logo} height="70vh"  style={{ margin:'1.5%'}}></img>
-            <div style={{fontFamily:'Work Sans', fontSize:30, fontWeight:'500', color:'#717171'}}>Learn Sign Langauge for Free. Real-time.</div>
-           <Link to="/register"> <div style={{borderRadius:20,backgroundColor:'#274968', color:'#FFF', width:'15%', height:'5vh', fontFamily:'Work Sans',textAlign:'center', fontWeight:'600', paddingTop:'1%', alignSelf:'center', justifyContent:'center', marginLeft:'42%', marginTop:'5%'}}>REGISTER</div></Link>
-           <Link to="/login"> <div style={{borderRadius:20,borderWidth:2, borderStyle:'double', backgroundColor:'#FFF', color:'#274968', width:'15%', height:'5vh', fontFamily:'Work Sans',textAlign:'center', fontWeight:'600', paddingTop:'1%', alignSelf:'center', justifyContent:'center', marginLeft:'42%', marginTop:'1.75%'}}>LOGIN</div></Link>
+            <img src={Logo} height="50vh"  style={{ margin:'1.5%'}}></img>
+            <div style={{fontFamily:'Arial', fontSize:20, fontWeight:'500', color:'#717171'}}>Learn Sign Language for Free. Interactively.</div>
+            <div style={{borderRadius:20,backgroundColor:'#274968', color:'#FFF', width:'15%', height:'5vh', fontFamily:'Helvetica',textAlign:'center', fontWeight:'600', paddingTop:'1%', alignSelf:'center', justifyContent:'center', marginLeft:'42%', marginTop:'5%'}}><Link to="/register" style = {{textDecoration: 'none', color:"#FFFFFF"}}>REGISTER</Link></div>
+           <div style={{borderRadius:20,borderWidth:2, borderStyle:'double', backgroundColor:'#FFF', color:'#274968', width:'15%', height:'5vh', fontFamily:'Helvetica',textAlign:'center', fontWeight:'600', paddingTop:'1%', alignSelf:'center', justifyContent:'center', marginLeft:'42%', marginTop:'1.75%'}}><Link to="/login" style = {{textDecoration: 'none', color: "#274968"}}> LOGIN</Link></div>
      
           
 
