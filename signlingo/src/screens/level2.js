@@ -47,7 +47,7 @@ class Level2 extends Component {
     getAlphabet(a) {
         if(a==false){
            var text = "";
-      var possible = "ABCDEFG";    
+      var possible = "ABCDEFGHIJKLMNOPQRSTWXYZ";    
       text = possible.charAt(Math.floor(Math.random() * possible.length));
       this.setState({alpha:text})
       console.log(text)
@@ -83,29 +83,30 @@ class Level2 extends Component {
     }
       render() {
           return (
-           <div style={{margin:'auto', alignSelf:'center', alignContent:'center', justifyContent:'center', height:'90vh'}}>
-            <div style={{borderBottomColor:'#F7F9FB', borderBottomStyle:'outset', height:'10vh'}}>
-            <img src={Logo} height="30vh"  style={{ margin:'1.5%', float:'left', marginLeft:'5%'}}></img>
+           <div style={{margin:'auto', alignSelf:'center', alignContent:'center', justifyContent:'center', height:'70vh'}}>
+            <div style={{height:'10vh', backgroundColor:'#ffffff'}}>
+            <img src={Logo} height="24vh"  style={{ margin:'1.5%', float:'left', marginLeft:'5%'}}></img>
             
-            <Link to="/login">  <div style={{fontFamily:'Work Sans', fontSize:30, fontWeight:'600', color:'#717171', paddingTop:'1.5%', float:'right', marginRight:'5%'}}>Logout</div></Link>
-            <Link to="/level">    <div style={{fontFamily:'Work Sans', fontSize:30, fontWeight:'600', color:'#717171', paddingTop:'1.5%', float:'right' ,marginRight:'1.5%'}}>Home</div></Link>
-            </div>
+            <Link to="/login"><div style={{fontFamily:'Helvetica', fontSize:20, fontWeight:'600', color:'#717171', paddingTop:'1.5%', float:'right', marginRight:'5%'}}>Logout</div></Link>
+            <Link to="/home"><div style={{fontFamily:'Helvetica', fontSize:20, fontWeight:'600', color:'#717171', paddingTop:'1.5%', paddingRight:'1.5%', float:'right' ,marginRight:'1.5%'}}>Home</div></Link></div>
+            <hr/>
           <br></br>
           
-          <div style={{backgroundColor:'#ededed', marginTop:'-1%', height:'95vh', alignContent:'center', justifyContent:'center'}}>
-          {!this.state.incorrect && !this.state.correct && <div>
-            <div style={{fontFamily:'Work Sans', fontSize:50, fontWeight:'600', color:'#717171', paddingTop:'5%'}}>Which letter does this represent?</div> <br></br>
-           
-           
-            <div style={{backgroundColor:'#FFF', marginTop:'1.4%', marginLeft:'40%', alignSelf:'center', width:'20%',paddingTop:'2.5%', borderRadius:20, boxShadow:'-webkit-box-shadow: 5px 5px 8px -1px rgba(0,0,0,0.67)-webkit-box-shadow: 5px 5px 8px -1px rgba(0,0,0,0.67)',boxShadow: '5px 5px 8px -1px rgba(0,0,0,0.67)'}}>
           
-            <img  style={{textAlign:'center', alignSelf:'center'}}  height={400} width={150} src={`../asl/Sign_language_${this.state.alpha}.svg`}></img>
+          <div style={{backgroundColor:'#FFFFFF', marginTop:'-1%', display:'block', height:'88vh'}}>
+          {!this.state.incorrect && !this.state.correct && <div>
+            <div style={{fontFamily:'Helvetica', fontSize:35, fontWeight:'450', color:'#717171', paddingTop:'3%'}}>Which letter does this represent?</div> <br></br>
+           
+           
+            <div style={{backgroundColor:'#FFF', marginLeft:'40%', alignSelf:'center', width:'20%', borderRadius:20}}>
+          
+            <img  style={{textAlign:'center', alignSelf:'center'}}  height={280} width={120} src={`../asl/Sign_language_${this.state.alpha}.svg`}></img>
        
             </div>
 
 
-            <input style={{fontFamily:'Work Sans', fontSize:30, fontWeight:'300', textAlign:'center', color:'#274968', borderRadius:10, marginTop:'2.5%', padding:'1%', alignSelf:'center'}} name="answer" value={this.state.value} onChange={this.handleChange} placeholder="Type your answer"></input>
-            <div style={{backgroundColor:'#274968', color:'#FFF', width:300, fontFamily:'Roboto', fontSize:20, borderRadius:10, padding:'1%', marginBottom:'2.5%', textAlign:'center', alignSelf:'center', justifyContent:'center', justifySelf:'center', marginTop:'1%', marginLeft:'41%'}} onClick={()=>this._checkAnswer(this.state.value,this.state.alpha)}>
+            <input style={{width:'30%', fontSize:22, borderRadius:10, borderWidth :0, backgroundColor:'#E7E7E7', padding:'25px'}} name="answer" value={this.state.value} onChange={this.handleChange} placeholder="Type your answer"></input>
+            <div style={{backgroundColor:'#274968', color:'#FFF', width:300, fontFamily:'Helvetica', fontSize:20, borderRadius:10, padding:'1%', marginBottom:'2.5%', textAlign:'center', alignSelf:'center', justifyContent:'center', justifySelf:'center', marginTop:'1%', marginLeft:'39%'}} onClick={()=>this._checkAnswer(this.state.value,this.state.alpha)}>
                 SUBMIT
                 </div> <br></br>
          </div>}
@@ -113,9 +114,9 @@ class Level2 extends Component {
                  <div style={{paddingTop:'15%'}}>
     <div style={{backgroundColor:'#FFF', marginTop:'1.4%', marginLeft:'40%', alignSelf:'center', width:'20%',paddingTop:'5%',paddingBottom:'2.5%', borderRadius:20, boxShadow:'-webkit-box-shadow: 5px 5px 8px -1px rgba(0,0,0,0.67)-webkit-box-shadow: 5px 5px 8px -1px rgba(0,0,0,0.67)',boxShadow: '5px 5px 8px -1px rgba(0,0,0,0.67)'}}>
           
-         <div style={{fontFamily:'Work Sans', fontSize:20, color:'#274968', fontWeight:600}}> Correct Answer!</div>
-         <div style={{fontFamily:'Work Sans', fontSize:30, color:'#274968', fontWeight:800}}> +100 points</div>
-          <div style={{fontFamily:'Work Sans', fontSize:20, fontWeight:500, backgroundColor:'#274968', color:'#FFF', width:'70%', borderRadius:10, height:'5%', paddingTop:'2%',paddingBottom:'2%', marginTop:'5%', marginLeft:'12.5%', marginBottom:'15%',paddingBottom:'2%'}} onClick={()=>this.getAlphabet(this.state.incorrect)}>Next question</div>
+         <div style={{fontFamily:'Helvetica', fontSize:20, color:'#274968', fontWeight:600}}> Correct Answer!</div>
+         <div style={{fontFamily:'Helvetica', fontSize:30, color:'#274968', fontWeight:800}}> +100 points</div>
+          <div style={{fontFamily:'Helvetica', fontSize:20, fontWeight:500, backgroundColor:'#274968', color:'#FFF', width:'70%', borderRadius:10, height:'5%', paddingTop:'2%',paddingBottom:'2%', marginTop:'5%', marginLeft:'12.5%', marginBottom:'15%',paddingBottom:'2%'}} onClick={()=>this.getAlphabet(this.state.incorrect)}>Next question</div>
        </div>   
     </div>
     }
@@ -123,8 +124,8 @@ class Level2 extends Component {
     <div style={{paddingTop:'15%'}}>
    <div style={{backgroundColor:'#FFF', marginTop:'1.4%', marginLeft:'40%', alignSelf:'center', width:'20%',paddingTop:'5%',paddingBottom:'2.5%', borderRadius:20, boxShadow:'-webkit-box-shadow: 5px 5px 8px -1px rgba(0,0,0,0.67)-webkit-box-shadow: 5px 5px 8px -1px rgba(0,0,0,0.67)',boxShadow: '5px 5px 8px -1px rgba(0,0,0,0.67)'}}>
           
-   <div style={{fontFamily:'Work Sans', fontSize:20, color:'#274968', fontWeight:600}}> Incorrect!</div>
-    <div style={{fontFamily:'Work Sans', fontSize:20, fontWeight:500, backgroundColor:'#274968', color:'#FFF', width:'70%', borderRadius:10, height:'5%', paddingTop:'2%',paddingBottom:'2%', marginTop:'5%', marginLeft:'12.5%', marginBottom:'15%',paddingBottom:'2%'}} onClick={()=>this.getAlphabet(this.state.incorrect)}>Try again</div>
+   <div style={{fontFamily:'Helvetica', fontSize:20, color:'#274968', fontWeight:600}}> Incorrect!</div>
+    <div style={{fontFamily:'Helvetica', fontSize:20, fontWeight:500, backgroundColor:'#274968', color:'#FFF', width:'70%', borderRadius:10, height:'5%', paddingTop:'2%',paddingBottom:'2%', marginTop:'5%', marginLeft:'12.5%', marginBottom:'15%',paddingBottom:'2%'}} onClick={()=>this.getAlphabet(this.state.incorrect)}>Try again</div>
     </div>
 </div>
     }

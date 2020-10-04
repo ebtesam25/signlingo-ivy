@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import Logo from '../assets/logo.png';
 import US from '../assets/us.png';
 
+          
 class Home extends Component {
     constructor(props) {
       super(props);
@@ -13,12 +14,11 @@ class Home extends Component {
             <div style={{height:'10vh', backgroundColor:'#ffffff'}}>
             <img src={Logo} height="24vh"  style={{ margin:'1.5%', float:'left', marginLeft:'5%'}}></img>
             
-            <div style={{fontFamily:'Helvetica', fontSize:20, fontWeight:'600', color:'#717171', paddingTop:'1.5%', float:'right', marginRight:'5%'}}>Logout</div>
-            <div style={{fontFamily:'Helvetica', fontSize:20, fontWeight:'600', color:'#717171', paddingTop:'1.5%', paddingRight:'1.5%', float:'right' ,marginRight:'1.5%'}}>Home</div>
+            <Link to="/login"><div style={{fontFamily:'Helvetica', fontSize:20, fontWeight:'600', color:'#717171', paddingTop:'1.5%', float:'right', marginRight:'5%'}}>Logout</div></Link>
+            <Link to="/home"><div style={{fontFamily:'Helvetica', fontSize:20, fontWeight:'600', color:'#717171', paddingTop:'1.5%', paddingRight:'1.5%', float:'right' ,marginRight:'1.5%'}}>Home</div></Link>
             </div>
             <hr/>
           <br></br>
-          
           <div style={{backgroundColor:'#ffffff', marginTop:'-1%', height:'88vh'}}>
            
           <div style={{fontFamily:'Helvetica', fontSize:30, fontWeight:'600', color:'#717171', paddingTop:'3%'}}>Choose a course to get started.</div> <br></br>
