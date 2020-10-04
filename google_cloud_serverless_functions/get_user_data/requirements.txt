@@ -1,0 +1,6 @@
+bcrypt==3.2.0
+cffi==1.14.3
+pycparser==2.20
+PyMySQL==0.10.1
+six==1.15.0
+uuid==1.30
