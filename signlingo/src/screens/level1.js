@@ -94,9 +94,22 @@ class Level1 extends Component {
     _checkAnswer(x,y){
         if(x==y){
             this.setState({correct:true});
+            if (window.sessionStorage.getItem("level1") == null){
+              window.sessionStorage.setItem("level1", 100);
+            }
+            else{
+              window.sessionStorage.setItem("level1", parseInt(window.sessionStorage.getItem("level1")) + 100);
+            }
         }
         else if(y!=this.state.c1 && y!=this.state.c2 && y!=this.state.c3 && x=="0"){
             this.setState({correct:true})
+            if (window.sessionStorage.getItem("level1") == null){
+              window.sessionStorage.setItem("level1", 100);
+            }
+            else{
+              window.sessionStorage.setItem("level1", parseInt(window.sessionStorage.getItem("level1")) + 100);
+            }
+            
         }
         else{
             this.setState({incorrect:true});
@@ -109,12 +122,16 @@ class Level1 extends Component {
     }
 
       render() {
+        if (window.sessionStorage.getItem("userid") == null){
+            this.props.history.push("/login");
+            return null;
+        }
           return (
            <div style={{margin:'auto', alignSelf:'center', alignContent:'center', justifyContent:'center', height:'70vh'}}>
             <div style={{height:'10vh', backgroundColor:'#ffffff'}}>
             <img src={Logo} height="24vh"  style={{ margin:'1.5%', float:'left', marginLeft:'5%'}}></img>
             
-            <Link to="/login"><div style={{fontFamily:'Helvetica', fontSize:20, fontWeight:'600', color:'#717171', paddingTop:'1.5%', float:'right', marginRight:'5%'}}>Logout</div></Link>
+            <Link to="/logout"><div style={{fontFamily:'Helvetica', fontSize:20, fontWeight:'600', color:'#717171', paddingTop:'1.5%', float:'right', marginRight:'5%'}}>Logout</div></Link>
             <Link to="/home"><div style={{fontFamily:'Helvetica', fontSize:20, fontWeight:'600', color:'#717171', paddingTop:'1.5%', paddingRight:'1.5%', float:'right' ,marginRight:'1.5%'}}>Home</div></Link></div>
             <hr/>
           <br></br>

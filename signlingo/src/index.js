@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 // import components
 import App from "./App";
 import Home from "./screens/home";
+import Logout from "./screens/logout";
 import Landing from "./screens/landing";
 import Dash from "./screens/landing";
 import Level from "./screens/level";
@@ -22,6 +23,7 @@ ReactDOM.render(
     <div className="App">
       <Route exact path="/" component={Landing} />
       <Route exact path="/register" component={Signup} />
+      <Route exact path="/logout" component={Logout} />
       <Route exact path="/login" component={Login} />
       <Route exact path="/home" component={Home} />
       <Route exact path="/level" component={Level} />
