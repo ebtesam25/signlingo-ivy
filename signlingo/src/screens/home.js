@@ -20,7 +20,7 @@ class Home extends Component {
           
           <div style={{backgroundColor:'#ededed', marginTop:'-1%', display:'block', height:'88vh'}}>
            
-            <div style={{fontFamily:'Work Sans', fontSize:50, fontWeight:'600', color:'#717171', paddingTop:'5%'}}>Choose a course to get started</div> <br></br>
+          <Link to="/"> <div style={{fontFamily:'Work Sans', fontSize:50, fontWeight:'600', color:'#717171', paddingTop:'5%'}}>Choose a course to get started</div> <br></br></Link>
             <Link to="/level"><div style={{float:'left',backgroundColor:'#FFF', marginTop:'5%', marginLeft:'15%', width:'20%',paddingTop:'2.5%', borderRadius:20, boxShadow:'-webkit-box-shadow: 5px 5px 8px -1px rgba(0,0,0,0.67)-webkit-box-shadow: 5px 5px 8px -1px rgba(0,0,0,0.67)',boxShadow: '5px 5px 8px -1px rgba(0,0,0,0.67)'}}>
            <h1 style={{fontFamily:'Roboto', fontSize:50, color:'#274968'}}>ASL</h1>
             <img src={US}></img>
